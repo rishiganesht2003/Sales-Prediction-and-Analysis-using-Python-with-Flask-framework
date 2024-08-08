@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metrics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff; /* Alice blue background */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #003366; /* Dark blue color */
+        }
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .go-back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.go-back-link:hover {
+    background-color: #0056b3; /* Darker shade of the primary color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.go-back-link:active {
+    background-color: #003d7a; /* Even darker shade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Metrics</h1>
+        <div>
+            <h2>Metrics Data</h2>
+            {{ metrics|safe }}
+        </div>
+        <div>
+            <h2>Metrics Graph</h2>
+            <img src="{{ url_for('generated_metrics_graph') }}" alt="Metrics Graph">
+        </div>
+    </div>
+    <a href="{{ url_for('index') }}" class="go-back-link">Go Back</a>
+
+</body>
+</html>

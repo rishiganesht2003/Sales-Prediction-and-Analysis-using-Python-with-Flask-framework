@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #e6f2ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #004d99; /* Dark blue color */
+            margin-top: 50px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input[type="number"], input[type="submit"] {
+            margin: 10px;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #009966; /* Green links */
+            text-decoration: none;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        a:hover {
+            text-decoration: underline;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sales Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required>
+        <br>
+        <label for="month">Month:</label>
+        <input type="number" id="month" name="month" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+
+    <a href="/generate_report?type=bar">Generate Bar Graph</a>
+    <a href="/generate_report?type=dotted">Generate Dotted Line Graph</a>
+    <a href="/generate_report?type=combined">Generate Combined Graph</a>
+    <a href="/metrics">View Metrics</a>
+    <a href="/write_predicted_sales">Download Predicted Sales Report</a>
+</body>
+</html>

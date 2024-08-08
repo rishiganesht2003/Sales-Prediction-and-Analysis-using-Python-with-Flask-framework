@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fffde7;
+            margin: 0;
+            padding: 20px;
+        }
+        .main-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff5722;
+        }
+        .predicted-container {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffe0b2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        a {
+            color: #4caf50;
+            text-decoration: none;
+            background-color: #c8e6c9;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #a5d6a7;
+        }
+        .go-back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.go-back-link:hover {
+    background-color: #0056b3; /* Darker shade of the primary color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.go-back-link:active {
+    background-color: #003d7a; /* Even darker shade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Sales Prediction Result</h1>
+        <div class="predicted-container">
+            <p>Predicted Sales: {{ prediction }}</p>
+        </div>
+    </div>
+    <a href="{{ url_for('index') }}" class="go-back-link">Go Back</a>
+</body>
+</html>
