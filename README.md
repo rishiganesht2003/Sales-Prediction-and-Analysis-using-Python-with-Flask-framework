@@ -13,8 +13,8 @@ This Flask application predicts sales using a linear regression model and provid
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/rishiganesht2003/Sales-Prediction-and-Analysis-using-Python-with-Flask-framework.git
+   cd Sales-Prediction-and-Analysis-using-Python-with-Flask-framework
 
 Create a Virtual Environment
     
